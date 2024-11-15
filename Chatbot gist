@@ -1,0 +1,94 @@
+public class Chatbot{
+    public String Opening()
+	{
+		return "Hello human, what is it you would like to say?";
+	}
+
+    public String getResponse(String statement)
+	{
+		String response = "";
+        //makes sure that it is always in lower case
+        statement = cleanInput(statement);
+
+		if (superIndexOf(statement,"no"))
+		{
+			response = "Why so negative human?";
+		}
+        else if (superIndexOf(statement, "hope")) {
+            response = "Humans are so hopeful...";
+        }
+        else if (superIndexOf(statement,"panda")) {
+            response = "Hmm, a panda, I didn't learn about that in Earth studies";
+        }
+        else if (superIndexOf(statement,"chatbot")) {
+            response = "Woah that's me";
+        }
+		else if (superIndexOf(statement,"Mr.Hill")
+				|| superIndexOf(statement,"Mr. Davis")
+				|| superIndexOf(statement,"Mr. Memmo"))
+		{
+			response = "He is a really good teacher";
+        }
+        else if (superIndexOf(statement, "Mrs. Crowley")) {
+            response = "She is a really good teacher";
+            
+        }
+        else if (superIndexOf(statement,"dog") 
+				|| superIndexOf(statement,"cat")
+				|| superIndexOf(statement, "fish")
+				|| superIndexOf(statement, "hamster"))
+		{
+			response = "Tell me more about your pets.";
+        }
+		else{
+			response = getRandomResponse();
+		}
+		return response;
+        }
+        private String getRandomResponse()
+        {
+            final int NUMBER_OF_RESPONSES = 6;
+            double r = Math.random();
+            int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
+            String response = "";
+            
+            if (whichResponse == 0)
+            {
+                response = "Interesting, tell me more.";
+            }
+            else if (whichResponse == 1)
+            {
+                response = "Hmmm.";
+            }
+            else if (whichResponse == 2)
+            {
+                response = "Do you really think so?";
+            }
+            else if (whichResponse == 3)
+            {
+                response = "You don't say.";
+            }
+            else if (whichResponse == 4)
+            {
+                response = "Huh, humans really can talk forever";
+            }
+            else if (whichResponse == 5)
+            {
+                response = "Humans are so interesting go on";
+            }
+            return response;
+}
+        public String cleanInput(String statement) {
+        // Remove common punctuation so that my alien super index of method still picks it up
+        return statement.replaceAll("[,!?]", "");
+    }
+        public boolean superIndexOf(String statement, String keyword) {
+        String lowerCaseStatement = statement.toLowerCase();
+        String lowerCaseKeyword = keyword.toLowerCase();
+        return lowerCaseStatement.startsWith(lowerCaseKeyword)
+        || lowerCaseStatement.endsWith(lowerCaseKeyword)
+        || lowerCaseStatement.equals(lowerCaseKeyword)
+        || lowerCaseStatement.contains(lowerCaseKeyword);
+
+        }
+}
