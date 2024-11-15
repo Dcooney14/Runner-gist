@@ -38,7 +38,7 @@ public class Chatbot{
 				|| superIndexOf(statement, "fish")
 				|| superIndexOf(statement, "hamster"))
 		{
-			response = "Tell me more about your pets.";
+			response = "Tell me more about your human loving animals.";
         }
 		else{
 			response = getRandomResponse();
