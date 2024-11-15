@@ -18,15 +18,10 @@ public class ChatbotRunner
 		System.out.println (cb.getResponse("Yeah, Mr.Hill is my favorite teacher"));
 		Scanner in = new Scanner (System.in);
     
-    
-    // Oh no, this code is bummy, fix it so it only needs one in.nextLine()
-		String statement = in.nextLine();
-		
-		while (!statement.equals("Bye"))
-		{
-			System.out.println (cb.getResponse(statement));
-			statement = in.nextLine();
-		}
-	}
+    String statement;
 
+	while (!(statement = in.nextLine()).equals("Bye")) {
+    System.out.println(cb.getResponse(statement));
+	}
+	}
 }
