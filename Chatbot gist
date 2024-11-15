@@ -31,12 +31,12 @@ public class Chatbot{
 			response = "Tell me more about your family.";
 	}
 	else if (superIndexOf(statement,"Mr. Hill")
-				|| superIndexOf(statement,"Mr. Davis")
-				|| superIndexOf(statement,"Mr. Memmo"))
+				|| superIndexOf(statement,"Davis")
+				|| superIndexOf(statement,"Memmo"))
 		{
 			response = "He is a really good teacher... for humans";
         }
-        else if (superIndexOf(statement, "Mrs. Crowley")) {
+        else if (superIndexOf(statement, "Crowley")) {
             response = "She is a really good teacher";
             
         }
