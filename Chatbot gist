@@ -79,8 +79,17 @@ public class Chatbot{
             return response;
 }
         public String cleanInput(String statement) {
-        // Remove common punctuation so that my alien super index of method still picks it up
-        return statement.replaceAll("[,!?]", "");
+            String clean = "";
+            for (int i = 0; i < statement.length(); i++) {
+                char c = statement.charAt(i);        
+                // Check if the character is a punctuation mark
+                if (c == ',' || c == '.' || c == '!' || c == '?') {
+                    clean += ' ';
+                } else {
+                    clean += c;
+                }
+            }      
+            return clean;
     }
         public boolean superIndexOf(String statement, String keyword) {
         String lowerCaseStatement = statement.toLowerCase();
