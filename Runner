@@ -14,8 +14,8 @@ public class ChatbotRunner
 	public static void main(String[] args)
 	{
 		Chatbot cb = new Chatbot();
-		
-		System.out.println (cb.getResponse("Yeah, Mr.Hill is my favorite teacher"));
+		string s = scan.nextLine();
+		System.out.println (cb.getResponse(s));
 		Scanner in = new Scanner (System.in);
     
     String statement;
