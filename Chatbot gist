@@ -27,7 +27,7 @@ public class Chatbot{
 				|| superIndexOf(statement,"Mr. Davis")
 				|| superIndexOf(statement,"Mr. Memmo"))
 		{
-			response = "He is a really good teacher";
+			response = "He is a really good teacher... for humans";
         }
         else if (superIndexOf(statement, "Mrs. Crowley")) {
             response = "She is a really good teacher";
