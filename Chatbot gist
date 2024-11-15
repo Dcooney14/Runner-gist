@@ -10,7 +10,7 @@ public class Chatbot{
         //makes sure that it is always in lower case
         statement = cleanInput(statement);
 
-		if (superIndexOf(statement,"no"))
+		if (superIndexOf(statement," no"))
 		{
 			response = "Why so negative human?";
 		}
