@@ -23,7 +23,14 @@ public class Chatbot{
         else if (superIndexOf(statement,"chatbot")) {
             response = "Woah that's me";
         }
-		else if (superIndexOf(statement,"Mr.Hill")
+	else if (superIndexOf(statement,"mother")
+				|| superIndexOf(statement,"father")
+				|| superIndexOf(statement,"sister")
+				|| superIndexOf(statement,"brother"))
+	{
+			response = "Tell me more about your family.";
+	}
+	else if (superIndexOf(statement,"Mr.Hill")
 				|| superIndexOf(statement,"Mr. Davis")
 				|| superIndexOf(statement,"Mr. Memmo"))
 		{
