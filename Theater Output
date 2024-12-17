@@ -1,0 +1,66 @@
+8049-coond25:APCSA coond25$  cd /Users/coond25/Desktop/Folders/APCSA ; /usr/bin/env /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java -XX:+ShowCodeDetailsInExceptionMessages -cp /Users/coond25/Library/Application\ Support/Code/User/workspaceStorage/b6f30056636bd325e151df754ed5f737/redhat.java/jdt_ws/APCSA_c556d5bc/bin TheaterRunner 
+Three customers in a 3x3 Theater: 
+[0] <empty>        <empty>        Brandon,74     
+[1] <empty>        <empty>        Jasmine,64     
+[2] <empty>        Samantha,59    <empty>        
+
+Seat 2,2 is Occupied: false
+This should be a 2x2 Theater where Saige is at 0,1
+Theater to test Empty Seat Code:
+[0] <empty>        Saige,74       
+[1] <empty>        <empty>        
+
+There is an empty seat at 0 0
+This is a 4x4 Theater with 5 random people and 3 assigned seats
+[0] Angel,60       Matt,65        Noelle,62      Kaleigh,70     
+[1] Steven,76      Brandon,74     <empty>        <empty>        
+[2] Kylie,54       <empty>        <empty>        <empty>        
+[3] <empty>        <empty>        <empty>        Lauren,68      
+
+The most occupied row is: 0
+Tallest Customer: Steven,76      
+This is a 3x3 Theater with 7 people in it
+[0] Angel,60       Matt,65        Noelle,62      
+[1] Kaleigh,70     Brandon,74     <empty>        
+[2] Kylie,54       <empty>        Lauren,68      
+
+Shorties:
+[Kylie,54       ]
+It's busy today. 5x4 Theater with 18 people in it
+Initial Seating of Customers
+
+[0] Brandon,74     Matt,65        Noelle,62      Kaleigh,70     
+[1] Steven,76      Angel,60       Lauren,68      Michael,64     
+[2] Robin,63       Bryan,60       Kyle,72        Danny,62       
+[3] Rachel,64      David,68       Sydney,59      Katie,70       
+[4] Kylie,54       Robert,78      <empty>        <empty>        
+
+Basic Method Tests:
+Our Tallest customer is: Robert,78      
+The Most Occupied Row is 3
+Empty seat at:  4 2
+
+
+Time to check for shorties and then move them!!!
+The following people can't see
+[Angel,60       , Michael,64     , Robin,63       , Sydney,59      , Kylie,54       ]
+The following people can't see
+[Angel,60       , Michael,64     , Robin,63       , Sydney,59      , Kylie,54       ]
+Moving Shorties
+Swapped Angel and Matt
+Swapped Michael and Kaleigh
+Swapped Robin and Steven
+Swapped Robin and Brandon
+Swapped Sydney and Kyle
+Swapped Sydney and Lauren
+Swapped Sydney and Noelle
+Swapped Kylie and Rachel
+Final Theater
+[0] Robin,63       Angel,60       Sydney,59      Michael,64     
+[1] <empty>        <empty>        <empty>        <empty>        
+[2] <empty>        Bryan,60       <empty>        Danny,62       
+[3] Kylie,54       David,68       <empty>        Katie,70       
+[4] <empty>        Robert,78      <empty>        <empty>        
+
+The total attendence for tonights show was: 10 people!
+The Theater Generated a total revenue of: $250
